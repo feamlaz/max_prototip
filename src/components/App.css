@@ -1,0 +1,35 @@
+/* App shell: dark canvas + centered column. */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 100dvh;
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+.app__inner {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 0;
+}
+
+.app-boot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 12px;
+  }
+}

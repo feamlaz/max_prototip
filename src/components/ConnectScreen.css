@@ -1,0 +1,166 @@
+/* ConnectScreen — branded card on the dark canvas. */
+
+.connect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+.connect::before {
+  position: fixed;
+  top: -30vh;
+  left: 50%;
+  width: min(900px, 130vw);
+  height: min(900px, 130vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(87, 45, 255, 0.28), transparent 62%);
+  content: '';
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.connect__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 460px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  background: var(--background-card);
+}
+
+.connect__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Logo mark drawn entirely from --brand-gradient, no image asset. */
+.brand-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: none;
+  border-radius: 18px;
+  background: var(--brand-gradient);
+}
+
+.brand-mark::after {
+  position: absolute;
+  inset: 5px;
+  border-radius: 13px;
+  background: var(--background-card);
+  content: '';
+}
+
+.brand-mark__glyph {
+  position: relative;
+  z-index: 1;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+}
+
+.brand-word {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  background: var(--brand-linear);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.connect__title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.connect__heading {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.connect__subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.connect__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.connect__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.connect__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.connect__help {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Token-in-path warning next to `apiUrl`: inline, never blocking. */
+.field__warning {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--danger);
+  overflow-wrap: anywhere;
+}
+
+.connect__help strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.connect__link {
+  color: var(--link);
+}
+
+@media (max-width: 480px) {
+  .connect {
+    padding: 16px;
+  }
+
+  .connect__card {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .connect__heading {
+    font-size: 19px;
+  }
+}

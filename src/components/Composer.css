@@ -1,0 +1,104 @@
+.composer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.composer__box {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px 8px 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  background: var(--background-surface);
+  transition: border-color 160ms ease;
+}
+
+.composer__box:focus-within {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.composer__input {
+  flex: 1;
+  min-width: 0;
+  max-height: 132px;
+  padding: 8px 0;
+  background: none;
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.45;
+  resize: none;
+  overflow-y: auto;
+}
+
+.composer__input::placeholder {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.composer__side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  padding-bottom: 2px;
+}
+
+.composer__counter {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.composer__counter--over {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.composer__send {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--brand-linear);
+  color: #fff;
+  transition: transform 120ms ease, filter 160ms ease, opacity 160ms ease;
+}
+
+.composer__send svg {
+  width: 20px;
+  height: 20px;
+}
+
+.composer__send:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.composer__send:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.composer__send:disabled {
+  opacity: 0.4;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.composer__hint {
+  font-size: 12.5px;
+  color: var(--danger);
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .composer__send {
+    transition: none;
+  }
+
+  .composer__send:active:not(:disabled) {
+    transform: none;
+  }
+}

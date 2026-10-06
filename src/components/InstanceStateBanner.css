@@ -1,0 +1,74 @@
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  background: var(--background-card);
+}
+
+.banner__icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+.banner--warn .banner__icon {
+  color: var(--accent-cyan);
+}
+
+.banner--info .banner__icon {
+  color: var(--link);
+}
+
+.banner--danger {
+  border-color: rgba(255, 75, 85, 0.32);
+  background: rgba(255, 75, 85, 0.1);
+}
+
+.banner--danger .banner__icon {
+  color: var(--danger);
+}
+
+.banner__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.banner__title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.banner__hint {
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.62);
+  overflow-wrap: anywhere;
+}
+
+.banner__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+
+@media (max-width: 620px) {
+  .banner {
+    flex-wrap: wrap;
+  }
+
+  .banner__actions {
+    width: 100%;
+  }
+
+  .banner__actions .btn {
+    flex: 1;
+  }
+}

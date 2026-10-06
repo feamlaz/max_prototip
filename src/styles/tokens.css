@@ -1,0 +1,54 @@
+/*
+ * Design tokens extracted from the real MAX messenger (https://web.max.ru).
+ * Values are verbatim from the production app — do not "improve" them here.
+ */
+
+:root {
+  /* Surfaces */
+  --background-primary: #17181c;
+  --background-secondary: #25262d;
+  --background-card: #25262d;
+  --background-surface: #0f0f12;
+
+  /* Text */
+  --text-primary: #ffffff;
+  /* source: #fffc */
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --link: #007aff;
+
+  /* Accents */
+  --accent-blue: #046ef4;
+  --accent-cyan: #01c5c8;
+  --accent-violet: #572dff;
+
+  /* Brand */
+  --brand-gradient: conic-gradient(
+    from 90deg,
+    #00ccff 59.4deg,
+    #0026ff 122.4deg,
+    #a500c6 180deg,
+    #00ccff 241.2deg,
+    #0026ff 298.8deg,
+    #a500c6 360deg
+  );
+  --brand-linear: linear-gradient(
+    97.21deg,
+    #01c5c8 0.32%,
+    #046ef4 44.6%,
+    #572dff 62.16%
+  );
+
+  /* Status */
+  --success: #19a63c;
+  --success-bright: #10ca3f;
+  --danger: #ff4b55;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, 'system-ui', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+}
